@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(run)",
+      "Bash(npm run *)",
+      "Bash(Start-Sleep -Seconds 4)",
+      "Bash(Invoke-WebRequest -Uri \"http://localhost:5173\" -UseBasicParsing)",
+      "Bash(Select-Object -ExpandProperty StatusCode)",
+      "PowerShell(npx --yes puppeteer@latest --version 2>&1 | Select-Object -First 3)",
+      "PowerShell(node \"C:\\\\Users\\\\dajma\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\screenshot.mjs\" 2>&1)",
+      "PowerShell(Copy-Item *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)"
+    ]
+  }
+}
