@@ -1,5 +1,7 @@
 import './App.css'
 
+const B = import.meta.env.BASE_URL
+
 export default function App() {
   return (
     <div className="landing">
@@ -7,7 +9,7 @@ export default function App() {
       {/* HEADER */}
       <header className="header">
         <div className="container header-inner">
-          <img src="/images/logo.png" alt="Daniel Machado" className="logo" />
+          <img src={B + 'images/logo.png'} alt="Daniel Machado" className="logo" />
           <nav className="nav">
             <a href="#inicio">Inicio</a>
             <a href="#autor">Sobre el Autor</a>
@@ -22,7 +24,7 @@ export default function App() {
       {/* ── HERO MOBILE ── visible < 1024px */}
       <section id="inicio" className="hero-mobile-section">
         <img
-          src="/images/hero-mobile.png"
+          src={B + 'images/hero-mobile.png'}
           alt="Descubriendo el Propósito de Dios para tu Vida"
           className="hero-mobile-img"
         />
@@ -47,7 +49,7 @@ export default function App() {
 
       {/* ── HERO DESKTOP ── visible ≥ 1024px */}
       <section className="hero hero-desktop-section">
-        <img src="/images/Hero.png" className="hero-bg" alt="" aria-hidden="true" />
+        <img src={B + 'images/Hero.png'} className="hero-bg" alt="" aria-hidden="true" />
         <div className="hero-overlay">
           <div className="container">
             <div className="hero-text">
@@ -115,7 +117,7 @@ export default function App() {
       <section id="contenido" className="transforma">
         <div className="container transforma-inner">
           <div className="transforma-img">
-            <img src="/images/livro_transforma_vida.png" alt="Interior del libro" />
+            <img src={B + 'images/livro_transforma_vida.png'} alt="Interior del libro" />
           </div>
           <div className="transforma-text">
             <h2>UN LIBRO QUE<br /><span className="text-gold">TRANSFORMARÁ TU VIDA</span></h2>
@@ -212,8 +214,8 @@ export default function App() {
           <h2 className="autor-name">Daniel Machado</h2>
           <div className="autor-inner">
             <div className="autor-img-wrapper">
-              <img src="/images/autor-v2.png" alt="Daniel Machado – Autor" className="autor-img-mobile" />
-              <img src="/images/autor-v2.png" alt="Daniel Machado – Autor" className="autor-img-desktop" />
+              <img src={B + 'images/autor-v2.png'} alt="Daniel Machado – Autor" className="autor-img-mobile" />
+              <img src={B + 'images/autor-v2.png'} alt="Daniel Machado – Autor" className="autor-img-desktop" />
             </div>
             <div className="autor-text">
               <p>
