@@ -1,6 +1,7 @@
 import './App.css'
 
 const B = import.meta.env.BASE_URL
+const HOTMART = 'https://pay.hotmart.com/V106461377N?checkoutMode=10'
 
 export default function App() {
   return (
@@ -17,7 +18,7 @@ export default function App() {
             <a href="#bonos">Bonos</a>
             <a href="#faq">Preguntas Frecuentes</a>
           </nav>
-          <a href="#comprar" className="btn-header">🛒 Quiero mi Copia</a>
+          <a href={HOTMART} className="btn-header" target="_blank" rel="noopener noreferrer">🛒 Quiero mi Copia</a>
         </div>
       </header>
 
@@ -36,13 +37,13 @@ export default function App() {
             </h2>
             <p className="hero-mobile-desc">
               Un devocional de 40 días para fortalecer tu fe, renovar tu mente
-              y caminar con más dirección en el propósito que Dios preparó para ti.
+              y caminar con dirección en el propósito que Dios preparó para ti.
             </p>
             <div className="hero-price-block">
-              <span className="hero-price-label">Accede hoy por solo</span>
+              <span className="hero-price-label">Accede hoy al libro + 5 bonos por solo</span>
               <strong className="hero-price-amount">US$ 9,90</strong>
             </div>
-            <a href="#comprar" className="btn-cta">QUIERO MI COPIA AHORA</a>
+            <a href={HOTMART} className="btn-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO MI COPIA AHORA</a>
             <div className="hero-trust">
               <span>🔒 Compra segura</span>
               <span>⚡ Acceso inmediato</span>
@@ -90,7 +91,7 @@ export default function App() {
                 <span className="hero-price-label">Accede hoy por solo</span>
                 <strong className="hero-price-amount">US$ 9,90</strong>
               </div>
-              <a href="#comprar" className="btn-cta">▶ QUIERO MI COPIA AHORA</a>
+              <a href={HOTMART} className="btn-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO MI COPIA AHORA</a>
               <p className="hero-sub">🔒 Pago 100% seguro &nbsp;·&nbsp; ✓ Satisfacción garantizada</p>
             </div>
           </div>
@@ -146,24 +147,21 @@ export default function App() {
         <div className="container">
           <h2>ESTO NO ES<br /><span className="text-gold">SOLO UN E-BOOK</span></h2>
           <p className="nseb-intro">
-            Más que reflexiones inspiradoras, este material fue diseñado para acompañarte
-            en <strong>40 días de transformación espiritual</strong> — con devocionales prácticos,
-            aplicaciones bíblicas y oraciones que te llevan de la lectura a la vida.
+            Este material fue diseñado para ser más que una lectura. Es un camino de <strong>40 días</strong> que te guía, paso a paso, hacia una fe más profunda, una mente renovada y un propósito claro.
           </p>
           <ul className="nseb-list">
             <li>Renueva tu mente con la Palabra de Dios</li>
-            <li>Entiende y vive el propósito que Dios tiene para ti</li>
+            <li>Entiende el propósito que Dios tiene para ti</li>
             <li>Fortalece tu comunión con Dios cada día</li>
-            <li>Avanza con más claridad, fe y convicción</li>
+            <li>Avanza con claridad, fe y convicción</li>
           </ul>
           <p className="nseb-closing">
-            Y para completar tu experiencia, recibirás también <strong>5 bonos exclusivos</strong>
-            — con valor percibido de US$ 31,50 — incluidos hoy sin costo adicional.
+            Y recibirás también <strong>5 bonos exclusivos</strong> — valorados en US$ 31,50 — incluidos hoy sin costo adicional.
           </p>
         </div>
       </section>
 
-      {/* BONOS */}
+      {/* BONOS — desktop only */}
       <section id="bonos" className="bonos-section">
         <div className="container">
           <h2>INCLUYE <span className="text-gold">5 BONOS EXCLUSIVOS</span></h2>
@@ -208,7 +206,7 @@ export default function App() {
               </div>
             </li>
           </ul>
-          <a href="#comprar" className="btn-cta btn-cta-bonos">▶ QUIERO MI COPIA + LOS 5 BONOS</a>
+          <a href={HOTMART} className="btn-cta btn-cta-bonos" target="_blank" rel="noopener noreferrer">▶ QUIERO MI COPIA + LOS 5 BONOS</a>
         </div>
       </section>
 
@@ -302,15 +300,15 @@ export default function App() {
               </div>
               <div className="vb-paquete-divider"></div>
               <div className="vb-paquete-row vb-paquete-sub">
-                <span>Valor total del paquete</span>
+                <span>Valor real del paquete</span>
                 <span className="vb-paquete-val">US$ 41,40</span>
               </div>
-              <div className="vb-paquete-row vb-paquete-hoje">
-                <span>Hoy accedes por solo</span>
-                <strong className="vb-paquete-preco">US$ 9,90</strong>
-              </div>
             </div>
-            <a href="#comprar" className="btn-cta vb-cta">▶ QUIERO EL LIBRO + LOS 5 BONOS</a>
+            <div className="vb-preco-final">
+              <span className="vb-preco-label">Hoy accedes por solo</span>
+              <strong className="vb-preco-valor">US$ 9,90</strong>
+            </div>
+            <a href={HOTMART} className="btn-cta vb-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO EL LIBRO + LOS 5 BONOS</a>
           </div>
         </div>
       </section>
@@ -356,7 +354,7 @@ export default function App() {
           <div className="testimonios-grid">
             <div className="testimonio-card">
               <div className="stars">★★★★★</div>
-              <p>"Comencé a leer sin saber muy bien qué esperar, y al tercer día ya sentía algo diferente. Dios empezó a hablarme con claridad sobre mi propósito. Exactamente lo que necesitaba."</p>
+              <p>"Comencé a leer sin saber qué esperar, y al tercer día ya sentía algo diferente. Dios empezó a hablarme con claridad sobre mi propósito. Exactamente lo que necesitaba."</p>
               <span>— María González</span>
             </div>
             <div className="testimonio-card">
@@ -366,7 +364,7 @@ export default function App() {
             </div>
             <div className="testimonio-card">
               <div className="stars">★★★★★</div>
-              <p>"Los bonos me sorprendieron. Los versículos y el plan de lectura bíblica se convirtieron en parte de mi rutina. Vale mucho más que el precio. ¡Lo recomiendo a todos!"</p>
+              <p>"Los bonos me sorprendieron. Los versículos y el plan de lectura bíblica se convirtieron en parte de mi rutina diaria. Vale mucho más que el precio. ¡Lo recomiendo!"</p>
               <span>— Carlos Méndez</span>
             </div>
           </div>
@@ -386,11 +384,11 @@ export default function App() {
           <div className="garantia-text">
             <h2>COMPRA CON<br /><span className="text-gold">TOTAL SEGURIDAD</span></h2>
             <p>
-              Si en los primeros 7 días sientes que este material no es para ti,
-              te devolvemos el 100% de tu dinero, sin preguntas y sin complicaciones.
-              Puedes dar este paso con total tranquilidad — el riesgo es cero.
+              Tienes 7 días para explorar el material completo. Si sientes que no es para ti,
+              te devolvemos el 100% de tu dinero — sin preguntas, sin complicaciones.
+              El riesgo es completamente nuestro.
             </p>
-            <a href="#" className="btn-cta">▶ QUIERO ACCEDER HOY</a>
+            <a href={HOTMART} className="btn-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO ACCEDER HOY</a>
           </div>
         </div>
       </section>
@@ -402,11 +400,11 @@ export default function App() {
           <div className="faq-list">
             <details className="faq-item">
               <summary>¿Cómo recibiré el libro y los bonos?</summary>
-              <p>Recibirás acceso inmediato al libro digital y a todos los bonos por correo electrónico, de forma instantánea, al confirmar tu compra.</p>
+              <p>Recibirás acceso inmediato al libro digital y a todos los bonos por correo electrónico, de forma instantánea, al confirmar tu compra en Hotmart.</p>
             </details>
             <details className="faq-item">
-              <summary>¿Recibiré los bonos junto con el libro?</summary>
-              <p>Sí, todos los 5 bonos exclusivos serán entregados junto con el libro principal, al mismo correo electrónico, inmediatamente después de tu compra.</p>
+              <summary>¿Cuánto tiempo necesito por día para el devocional?</summary>
+              <p>Con 10 a 20 minutos diarios ya puedes aprovechar todo el material — incluyendo la lectura, la reflexión y la oración. Fue diseñado para ser práctico y accesible en tu rutina.</p>
             </details>
             <details className="faq-item">
               <summary>¿En qué formato está disponible?</summary>
@@ -429,16 +427,14 @@ export default function App() {
         <div className="container">
           <p className="final-eyebrow">NO LLEGASTE HASTA AQUÍ POR CASUALIDAD</p>
           <h2>
-            Tal vez Dios esté usando este momento<br />
-            para invitarte a un nuevo tiempo de<br />
-            <span className="text-gold">fe, claridad y propósito</span>
+            Este puede ser el momento<br />
+            que Dios preparó para ti
           </h2>
           <p className="final-desc">
-            El libro ya está listo. Los 5 bonos también. Todo lo que necesitas para
-            comenzar tus 40 días de transformación espiritual te espera
-            del otro lado de esta decisión.
+            El libro y los 5 bonos te esperan.<br />
+            Empieza hoy tus 40 días de fe, claridad y propósito.
           </p>
-          <a href="#" className="btn-cta final-cta-btn">QUIERO COMENZAR MIS 40 DÍAS</a>
+          <a href={HOTMART} className="btn-cta final-cta-btn" target="_blank" rel="noopener noreferrer">QUIERO COMENZAR MIS 40 DÍAS</a>
         </div>
       </section>
 
