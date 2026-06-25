@@ -38,6 +38,10 @@ export default function App() {
               Un devocional de 40 días para fortalecer tu fe, renovar tu mente
               y caminar con más dirección en el propósito que Dios preparó para ti.
             </p>
+            <div className="hero-price-block">
+              <span className="hero-price-label">Accede hoy por solo</span>
+              <strong className="hero-price-amount">US$ XX,XX</strong>
+            </div>
             <a href="#comprar" className="btn-cta">QUIERO MI COPIA AHORA</a>
             <div className="hero-trust">
               <span>🔒 Compra segura por Hotmart</span>
@@ -81,6 +85,10 @@ export default function App() {
                   <div className="benefit-icon">⭐</div>
                   <span>Reflexiones<br />Diarias</span>
                 </div>
+              </div>
+              <div className="hero-price-block">
+                <span className="hero-price-label">Accede hoy por solo</span>
+                <strong className="hero-price-amount">US$ XX,XX</strong>
               </div>
               <a href="#comprar" className="btn-cta">▶ QUIERO MI COPIA AHORA</a>
               <p className="hero-sub">🔒 Pago 100% seguro &nbsp;·&nbsp; ✓ Satisfacción garantizada</p>
@@ -205,6 +213,110 @@ export default function App() {
             </li>
           </ul>
           <a href="#comprar" className="btn-cta btn-cta-bonos">▶ QUIERO MI COPIA + LOS 5 BONOS</a>
+        </div>
+      </section>
+
+      {/* VALOR DE LOS BONOS */}
+      <section className="valor-bonos">
+        <div className="container">
+          <p className="vb-eyebrow">LO QUE RECIBES HOY</p>
+          <h2 className="vb-headline">
+            No recibes solo un e-book.<br />
+            <span className="text-gold">Recibes un paquete completo</span><br />
+            de crecimiento espiritual.
+          </h2>
+          <p className="vb-subtitle">
+            Además del libro principal, recibirás 5 bonos exclusivos diseñados para
+            fortalecer tu fe, renovar tu mente y profundizar tu relación con Dios.
+          </p>
+
+          <ul className="vb-list">
+            <li className="vb-item">
+              <span className="vb-num">①</span>
+              <div className="vb-info">
+                <strong className="vb-name">35 Versículos de Fe</strong>
+                <span className="vb-desc">Con reflexión y aplicación personal</span>
+              </div>
+              <div className="vb-pricing">
+                <span className="vb-original">US$ 6,90</span>
+                <span className="vb-gratis">HOY GRATIS</span>
+              </div>
+            </li>
+            <li className="vb-item">
+              <span className="vb-num">②</span>
+              <div className="vb-info">
+                <strong className="vb-name">35 Versículos de Esperanza</strong>
+                <span className="vb-desc">Con reflexión y aplicación personal</span>
+              </div>
+              <div className="vb-pricing">
+                <span className="vb-original">US$ 6,90</span>
+                <span className="vb-gratis">HOY GRATIS</span>
+              </div>
+            </li>
+            <li className="vb-item">
+              <span className="vb-num">③</span>
+              <div className="vb-info">
+                <strong className="vb-name">35 Versículos de Propósito</strong>
+                <span className="vb-desc">Con reflexión y aplicación personal</span>
+              </div>
+              <div className="vb-pricing">
+                <span className="vb-original">US$ 6,90</span>
+                <span className="vb-gratis">HOY GRATIS</span>
+              </div>
+            </li>
+            <li className="vb-item">
+              <span className="vb-num">④</span>
+              <div className="vb-info">
+                <strong className="vb-name">Libro de Oraciones</strong>
+                <span className="vb-desc">Oraciones para fortalecer tu comunión con Dios</span>
+              </div>
+              <div className="vb-pricing">
+                <span className="vb-original">US$ 6,90</span>
+                <span className="vb-gratis">HOY GRATIS</span>
+              </div>
+            </li>
+            <li className="vb-item">
+              <span className="vb-num">⑤</span>
+              <div className="vb-info">
+                <strong className="vb-name">Plan de Lectura Bíblica</strong>
+                <span className="vb-desc">Plan práctico para leer y aplicar la Palabra de Dios</span>
+              </div>
+              <div className="vb-pricing">
+                <span className="vb-original">US$ 3,90</span>
+                <span className="vb-gratis">HOY GRATIS</span>
+              </div>
+            </li>
+          </ul>
+
+          <div className="vb-total-box">
+            <p className="vb-total-label">5 bonos exclusivos — valor total</p>
+            <p className="vb-total-valor">US$ 31,50</p>
+            <p className="vb-total-hoje">Incluidos hoy con tu compra: <strong>US$ 0,00</strong></p>
+          </div>
+
+          <div className="vb-paquete">
+            <p className="vb-paquete-title">VALOR TOTAL DEL PAQUETE</p>
+            <div className="vb-paquete-rows">
+              <div className="vb-paquete-row">
+                <span>Libro principal</span>
+                <span className="vb-paquete-val">US$ XX,XX</span>
+              </div>
+              <div className="vb-paquete-row">
+                <span>5 Bonos exclusivos</span>
+                <span className="vb-paquete-val vb-paquete-strike">US$ 31,50</span>
+              </div>
+              <div className="vb-paquete-divider"></div>
+              <div className="vb-paquete-row vb-paquete-sub">
+                <span>Valor total del paquete</span>
+                <span className="vb-paquete-val">US$ XX,XX</span>
+              </div>
+              <div className="vb-paquete-row vb-paquete-hoje">
+                <span>Hoy puedes acceder por solo</span>
+                <strong className="vb-paquete-preco">US$ XX,XX</strong>
+              </div>
+            </div>
+            <a href="#comprar" className="btn-cta vb-cta">▶ QUIERO MI COPIA AHORA</a>
+          </div>
         </div>
       </section>
 
