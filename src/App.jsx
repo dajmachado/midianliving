@@ -40,7 +40,7 @@ export default function App() {
             </p>
             <div className="hero-price-block">
               <span className="hero-price-label">Accede hoy por solo</span>
-              <strong className="hero-price-amount">US$ XX,XX</strong>
+              <strong className="hero-price-amount">US$ 9,90</strong>
             </div>
             <a href="#comprar" className="btn-cta">QUIERO MI COPIA AHORA</a>
             <div className="hero-trust">
@@ -88,7 +88,7 @@ export default function App() {
               </div>
               <div className="hero-price-block">
                 <span className="hero-price-label">Accede hoy por solo</span>
-                <strong className="hero-price-amount">US$ XX,XX</strong>
+                <strong className="hero-price-amount">US$ 9,90</strong>
               </div>
               <a href="#comprar" className="btn-cta">▶ QUIERO MI COPIA AHORA</a>
               <p className="hero-sub">🔒 Pago 100% seguro &nbsp;·&nbsp; ✓ Satisfacción garantizada</p>
@@ -299,7 +299,7 @@ export default function App() {
             <div className="vb-paquete-rows">
               <div className="vb-paquete-row">
                 <span>Libro principal</span>
-                <span className="vb-paquete-val">US$ XX,XX</span>
+                <span className="vb-paquete-val">US$ 9,90</span>
               </div>
               <div className="vb-paquete-row">
                 <span>5 Bonos exclusivos</span>
@@ -308,11 +308,11 @@ export default function App() {
               <div className="vb-paquete-divider"></div>
               <div className="vb-paquete-row vb-paquete-sub">
                 <span>Valor total del paquete</span>
-                <span className="vb-paquete-val">US$ XX,XX</span>
+                <span className="vb-paquete-val">US$ 41,40</span>
               </div>
               <div className="vb-paquete-row vb-paquete-hoje">
                 <span>Hoy puedes acceder por solo</span>
-                <strong className="vb-paquete-preco">US$ XX,XX</strong>
+                <strong className="vb-paquete-preco">US$ 9,90</strong>
               </div>
             </div>
             <a href="#comprar" className="btn-cta vb-cta">▶ QUIERO MI COPIA AHORA</a>
