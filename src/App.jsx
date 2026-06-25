@@ -44,9 +44,9 @@ export default function App() {
             </div>
             <a href="#comprar" className="btn-cta">QUIERO MI COPIA AHORA</a>
             <div className="hero-trust">
-              <span>🔒 Compra segura por Hotmart</span>
+              <span>🔒 Compra segura</span>
               <span>⚡ Acceso inmediato</span>
-              <span>🎁 Incluye 5 bonos exclusivos</span>
+              <span>🎁 5 bonos incluidos</span>
             </div>
           </div>
         </div>
@@ -146,23 +146,19 @@ export default function App() {
         <div className="container">
           <h2>ESTO NO ES<br /><span className="text-gold">SOLO UN E-BOOK</span></h2>
           <p className="nseb-intro">
-            Este material no fue creado solo para que leas algunas reflexiones y sigas
-            adelante con tu rutina. Fue diseñado para acompañarte en una jornada de
-            <strong> 40 días de transformación espiritual</strong>, claridad, fe y dirección.
-          </p>
-          <p className="nseb-sub">
-            A través de devocionales prácticos, aplicaciones bíblicas y oraciones, este libro te ayudará a:
+            Más que reflexiones inspiradoras, este material fue diseñado para acompañarte
+            en <strong>40 días de transformación espiritual</strong> — con devocionales prácticos,
+            aplicaciones bíblicas y oraciones que te llevan de la lectura a la vida.
           </p>
           <ul className="nseb-list">
-            <li>Renovar tu mente con la Palabra de Dios</li>
-            <li>Entender mejor el propósito de Dios para tu vida</li>
-            <li>Fortalecer tu comunión con Dios cada día</li>
-            <li>Caminar con más claridad, intención y convicción</li>
+            <li>Renueva tu mente con la Palabra de Dios</li>
+            <li>Entiende y vive el propósito que Dios tiene para ti</li>
+            <li>Fortalece tu comunión con Dios cada día</li>
+            <li>Avanza con más claridad, fe y convicción</li>
           </ul>
           <p className="nseb-closing">
-            Y para hacer esta experiencia aún más completa, también recibirás
-            <strong> 5 bonos exclusivos</strong> que complementan tu crecimiento espiritual
-            y te ayudarán a profundizar aún más en tu fe.
+            Y para completar tu experiencia, recibirás también <strong>5 bonos exclusivos</strong>
+            — con valor percibido de US$ 31,50 — incluidos hoy sin costo adicional.
           </p>
         </div>
       </section>
@@ -219,15 +215,14 @@ export default function App() {
       {/* VALOR DE LOS BONOS */}
       <section className="valor-bonos">
         <div className="container">
-          <p className="vb-eyebrow">LO QUE RECIBES HOY</p>
+          <p className="vb-eyebrow">INCLUYE 5 BONOS EXCLUSIVOS</p>
           <h2 className="vb-headline">
-            No recibes solo un e-book.<br />
-            <span className="text-gold">Recibes un paquete completo</span><br />
-            de crecimiento espiritual.
+            Todo lo que recibes<br />
+            <span className="text-gold">con tu compra hoy</span>
           </h2>
           <p className="vb-subtitle">
-            Además del libro principal, recibirás 5 bonos exclusivos diseñados para
-            fortalecer tu fe, renovar tu mente y profundizar tu relación con Dios.
+            Cada bono fue diseñado para complementar tu jornada espiritual y multiplicar
+            el impacto del libro en tu vida diaria.
           </p>
 
           <ul className="vb-list">
@@ -311,11 +306,11 @@ export default function App() {
                 <span className="vb-paquete-val">US$ 41,40</span>
               </div>
               <div className="vb-paquete-row vb-paquete-hoje">
-                <span>Hoy puedes acceder por solo</span>
+                <span>Hoy accedes por solo</span>
                 <strong className="vb-paquete-preco">US$ 9,90</strong>
               </div>
             </div>
-            <a href="#comprar" className="btn-cta vb-cta">▶ QUIERO MI COPIA AHORA</a>
+            <a href="#comprar" className="btn-cta vb-cta">▶ QUIERO EL LIBRO + LOS 5 BONOS</a>
           </div>
         </div>
       </section>
@@ -333,16 +328,17 @@ export default function App() {
             <div className="autor-text">
               <p>
                 Daniel Machado es escritor, predicador y comunicador cristiano, dedicado
-                a crear recursos bíblicos que fortalecen la fe y ayudan a las personas
-                a descubrir el propósito de Dios para sus vidas.
+                a crear recursos bíblicos que ayudan a las personas a fortalecer su fe
+                y descubrir el propósito que Dios tiene para sus vidas.
               </p>
               <p>
-                Como presbítero y comunicador, ha enfocado su trabajo en enseñar la
-                Palabra de Dios de forma práctica, clara y transformadora, acompañando
-                a miles de personas en su crecimiento espiritual.
+                Como presbítero y comunicador, ha acompañado a miles de personas en su
+                crecimiento espiritual, enseñando la Palabra con claridad, profundidad
+                y propósito real.
               </p>
               <p className="autor-closing">
-                "Este libro fue creado para ayudarte a vivir con más fe, dirección y propósito."
+                "Este material fue creado para ayudarte a vivir con más fe, dirección
+                y propósito — exactamente donde Dios te llama."
               </p>
               <div className="autor-links">
                 <span>🌐 danielmachado.com</span>
@@ -360,17 +356,17 @@ export default function App() {
           <div className="testimonios-grid">
             <div className="testimonio-card">
               <div className="stars">★★★★★</div>
-              <p>"Este libro cambió mi perspectiva completamente. Ahora entiendo el propósito que Dios tiene para mi vida. ¡Lo recomiendo a todos!"</p>
+              <p>"Comencé a leer sin saber muy bien qué esperar, y al tercer día ya sentía algo diferente. Dios empezó a hablarme con claridad sobre mi propósito. Exactamente lo que necesitaba."</p>
               <span>— María González</span>
             </div>
             <div className="testimonio-card">
               <div className="stars">★★★★★</div>
-              <p>"Cada página está llena de sabiduría y revelación. Daniel tiene el don de hacer que la Biblia sea accesible y transformadora."</p>
+              <p>"Las reflexiones son profundas pero muy accesibles. Cada día encontré algo que tocó mi corazón. Daniel tiene el don de hacer que la Palabra de Dios sea práctica y transformadora."</p>
               <span>— Ana Rodríguez</span>
             </div>
             <div className="testimonio-card">
               <div className="stars">★★★★★</div>
-              <p>"Los bonos complementaron perfectamente la experiencia. No es solo un libro, es una guía espiritual para crecer con Dios."</p>
+              <p>"Los bonos me sorprendieron. Los versículos y el plan de lectura bíblica se convirtieron en parte de mi rutina. Vale mucho más que el precio. ¡Lo recomiendo a todos!"</p>
               <span>— Carlos Méndez</span>
             </div>
           </div>
@@ -388,14 +384,13 @@ export default function App() {
             </div>
           </div>
           <div className="garantia-text">
-            <h2>TU SATISFACCIÓN ESTÁ<br /><span className="text-gold">GARANTIZADA</span></h2>
+            <h2>COMPRA CON<br /><span className="text-gold">TOTAL SEGURIDAD</span></h2>
             <p>
-              Si por cualquier razón sientes que este material no fue para ti, tendrás
-              7 días de garantía para solicitar tu reembolso. Compra con tranquilidad,
-              sin riesgo y con la seguridad de que estás dando un paso importante
-              para fortalecer tu fe.
+              Si en los primeros 7 días sientes que este material no es para ti,
+              te devolvemos el 100% de tu dinero, sin preguntas y sin complicaciones.
+              Puedes dar este paso con total tranquilidad — el riesgo es cero.
             </p>
-            <a href="#" className="btn-cta">▶ QUIERO MI COPIA AHORA</a>
+            <a href="#" className="btn-cta">▶ QUIERO ACCEDER HOY</a>
           </div>
         </div>
       </section>
@@ -406,16 +401,20 @@ export default function App() {
           <h2>PREGUNTAS FRECUENTES</h2>
           <div className="faq-list">
             <details className="faq-item">
-              <summary>¿Cómo recibiré el libro?</summary>
-              <p>Recibirás acceso inmediato al libro digital (PDF) por correo electrónico después de confirmar tu compra.</p>
+              <summary>¿Cómo recibiré el libro y los bonos?</summary>
+              <p>Recibirás acceso inmediato al libro digital y a todos los bonos por correo electrónico, de forma instantánea, al confirmar tu compra.</p>
+            </details>
+            <details className="faq-item">
+              <summary>¿Recibiré los bonos junto con el libro?</summary>
+              <p>Sí, todos los 5 bonos exclusivos serán entregados junto con el libro principal, al mismo correo electrónico, inmediatamente después de tu compra.</p>
             </details>
             <details className="faq-item">
               <summary>¿En qué formato está disponible?</summary>
-              <p>El libro está disponible en formato digital PDF, compatible con todos los dispositivos: teléfono, tablet y computadora.</p>
+              <p>El libro y los bonos están en formato digital PDF, compatibles con todos los dispositivos: teléfono, tablet y computadora.</p>
             </details>
             <details className="faq-item">
-              <summary>¿Puedo leerlo en mi teléfono?</summary>
-              <p>Sí, el formato PDF es 100% compatible con cualquier dispositivo móvil Android o iPhone.</p>
+              <summary>¿Necesito conocimiento bíblico previo?</summary>
+              <p>No. Este material fue diseñado para personas en cualquier nivel espiritual. Si tienes el deseo genuino de crecer en tu fe y conocer el propósito de Dios, este libro es para ti.</p>
             </details>
             <details className="faq-item">
               <summary>¿Cómo funciona la garantía de 7 días?</summary>
@@ -430,14 +429,16 @@ export default function App() {
         <div className="container">
           <p className="final-eyebrow">NO LLEGASTE HASTA AQUÍ POR CASUALIDAD</p>
           <h2>
-            Dios puede usar este momento para ayudarte a fortalecer tu fe,
-            renovar tu mente y caminar con <span className="text-gold">propósito</span>.
+            Tal vez Dios esté usando este momento<br />
+            para invitarte a un nuevo tiempo de<br />
+            <span className="text-gold">fe, claridad y propósito</span>
           </h2>
           <p className="final-desc">
-            Si deseas crecer espiritualmente, escuchar más claramente la voz de Dios
-            y avanzar con dirección, este libro puede ser el próximo paso que tu vida necesita.
+            El libro ya está listo. Los 5 bonos también. Todo lo que necesitas para
+            comenzar tus 40 días de transformación espiritual te espera
+            del otro lado de esta decisión.
           </p>
-          <a href="#" className="btn-cta">QUIERO MI COPIA AHORA</a>
+          <a href="#" className="btn-cta final-cta-btn">QUIERO COMENZAR MIS 40 DÍAS</a>
         </div>
       </section>
 
