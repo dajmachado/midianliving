@@ -11,11 +11,26 @@ export default function App() {
       { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
     )
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
-    return () => observer.disconnect()
+
+    const floatBar = document.getElementById('float-bar')
+    const onScroll = () => floatBar?.classList.toggle('float-bar--visible', window.scrollY > 80)
+    window.addEventListener('scroll', onScroll, { passive: true })
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', onScroll)
+    }
   }, [])
 
   return (
     <div className="landing">
+
+      {/* FLOATING CTA BAR */}
+      <div id="float-bar" className="float-bar">
+        <a href={HOTMART} className="float-bar-btn" target="_blank" rel="noopener noreferrer">
+          ▶ QUIERO MI COPIA + 5 BONOS — US$ 6,90
+        </a>
+      </div>
 
       {/* HEADER */}
       <header className="header">
@@ -51,7 +66,7 @@ export default function App() {
             </p>
             <div className="hero-price-block">
               <span className="hero-price-label">Accede hoy al libro + 5 bonos por solo</span>
-              <strong className="hero-price-amount">US$ 9,90</strong>
+              <strong className="hero-price-amount">US$ 6,90</strong>
             </div>
             <a href={HOTMART} className="btn-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO MI COPIA AHORA</a>
             <div className="hero-trust">
@@ -99,7 +114,7 @@ export default function App() {
               </div>
               <div className="hero-price-block">
                 <span className="hero-price-label">Accede hoy por solo</span>
-                <strong className="hero-price-amount">US$ 9,90</strong>
+                <strong className="hero-price-amount">US$ 6,90</strong>
               </div>
               <a href={HOTMART} className="btn-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO MI COPIA AHORA</a>
               <p className="hero-sub">🔒 Pago 100% seguro &nbsp;·&nbsp; ✓ Satisfacción garantizada</p>
@@ -302,7 +317,7 @@ export default function App() {
             <div className="vb-paquete-rows">
               <div className="vb-paquete-row">
                 <span>Libro principal</span>
-                <span className="vb-paquete-val">US$ 9,90</span>
+                <span className="vb-paquete-val">US$ 6,90</span>
               </div>
               <div className="vb-paquete-row">
                 <span>5 Bonos exclusivos</span>
@@ -311,12 +326,12 @@ export default function App() {
               <div className="vb-paquete-divider"></div>
               <div className="vb-paquete-row vb-paquete-sub">
                 <span>Valor real del paquete</span>
-                <span className="vb-paquete-val">US$ 41,40</span>
+                <span className="vb-paquete-val">US$ 38,40</span>
               </div>
             </div>
             <div className="vb-preco-final">
               <span className="vb-preco-label">Hoy accedes por solo</span>
-              <strong className="vb-preco-valor">US$ 9,90</strong>
+              <strong className="vb-preco-valor">US$ 6,90</strong>
             </div>
             <a href={HOTMART} className="btn-cta vb-cta" target="_blank" rel="noopener noreferrer">▶ QUIERO EL LIBRO + LOS 5 BONOS</a>
           </div>

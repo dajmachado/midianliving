@@ -13,6 +13,42 @@
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   FLOATING CTA BAR
+═══════════════════════════════════════════════════════════════ */
+.float-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 300;
+  background: var(--dark-green);
+  padding: 10px 16px;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-110%);
+  transition: transform 0.35s ease;
+  box-shadow: 0 3px 16px rgba(0,0,0,0.3);
+}
+.float-bar--visible {
+  transform: translateY(0);
+}
+.float-bar-btn {
+  display: inline-block;
+  background: var(--cta-green);
+  color: #fff;
+  padding: 11px 28px;
+  border-radius: 6px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  transition: background 0.2s;
+  text-align: center;
+  white-space: nowrap;
+}
+.float-bar-btn:hover { background: var(--cta-hover); }
+
+/* ═══════════════════════════════════════════════════════════════
    SCROLL REVEAL
 ═══════════════════════════════════════════════════════════════ */
 .reveal {
@@ -102,9 +138,6 @@ ul { list-style: none; }
   background: #fff;
   border-bottom: 1px solid var(--border-light);
   border-top: 2px solid rgba(200,144,10,0.25);
-  position: sticky;
-  top: 0;
-  z-index: 100;
   box-shadow: 0 2px 10px rgba(0,0,0,0.07);
 }
 .header-inner {
