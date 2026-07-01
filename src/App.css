@@ -17,36 +17,52 @@
 ═══════════════════════════════════════════════════════════════ */
 .float-bar {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   z-index: 300;
   background: var(--dark-green);
-  padding: 10px 16px;
+  padding: 12px 16px;
+  padding-bottom: calc(12px + env(safe-area-inset-bottom));
   display: flex;
   justify-content: center;
-  transform: translateY(-110%);
+  transform: translateY(110%);
   transition: transform 0.35s ease;
-  box-shadow: 0 3px 16px rgba(0,0,0,0.3);
+  box-shadow: 0 -3px 16px rgba(0,0,0,0.3);
 }
 .float-bar--visible {
   transform: translateY(0);
 }
 .float-bar-btn {
-  display: inline-block;
+  display: block;
+  width: 100%;
   background: var(--cta-green);
   color: #fff;
-  padding: 11px 28px;
-  border-radius: 6px;
+  padding: 14px 24px;
+  border-radius: 8px;
   font-family: Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 0.4px;
   transition: background 0.2s;
   text-align: center;
-  white-space: nowrap;
 }
 .float-bar-btn:hover { background: var(--cta-hover); }
+@media (min-width: 1024px) {
+  .float-bar {
+    top: 0;
+    bottom: auto;
+    transform: translateY(-110%);
+    box-shadow: 0 3px 16px rgba(0,0,0,0.3);
+    padding: 10px 16px;
+  }
+  .float-bar-btn {
+    display: inline-block;
+    width: auto;
+    padding: 11px 28px;
+    font-size: 14px;
+  }
+}
 
 /* ═══════════════════════════════════════════════════════════════
    SCROLL REVEAL
