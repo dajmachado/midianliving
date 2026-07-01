@@ -1,9 +1,19 @@
+import { useEffect } from 'react'
 import './App.css'
 
 const B = import.meta.env.BASE_URL
 const HOTMART = 'https://pay.hotmart.com/V106461377N?checkoutMode=10'
 
 export default function App() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      entries => entries.forEach(e => e.isIntersecting && e.target.classList.add('visible')),
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    )
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <div className="landing">
 
@@ -101,21 +111,21 @@ export default function App() {
       {/* PARA TI SI */}
       <section className="para-ti">
         <div className="container">
-          <h2>ESTE LIBRO ES PARA TI SI...</h2>
-          <div className="cards-row">
-            <div className="card">
+          <h2 className="reveal">ESTE LIBRO ES PARA TI SI...</h2>
+          <div className="cards-row stagger">
+            <div className="card reveal">
               <div className="card-icon">🎯</div>
               <p>Quieres descubrir el propósito que Dios tiene para tu vida</p>
             </div>
-            <div className="card">
+            <div className="card reveal">
               <div className="card-icon">🕊️</div>
               <p>Necesitas claridad para tomar decisiones con paz y dirección</p>
             </div>
-            <div className="card">
+            <div className="card reveal">
               <div className="card-icon">📖</div>
               <p>Deseas fortalecer tu fe con herramientas prácticas y bíblicas</p>
             </div>
-            <div className="card">
+            <div className="card reveal">
               <div className="card-icon">❤️</div>
               <p>Anhelas una relación más profunda con Dios y su Palabra</p>
             </div>
@@ -126,10 +136,10 @@ export default function App() {
       {/* TRANSFORMA */}
       <section id="contenido" className="transforma">
         <div className="container transforma-inner">
-          <div className="transforma-img">
+          <div className="transforma-img reveal">
             <img src={B + 'images/livro_transforma_vida.webp'} alt="Interior del libro" />
           </div>
-          <div className="transforma-text">
+          <div className="transforma-text reveal">
             <h2>UN LIBRO QUE<br /><span className="text-gold">TRANSFORMARÁ TU VIDA</span></h2>
             <ul className="check-list">
               <li>Descubrirás las claves bíblicas para encontrar tu propósito único</li>
@@ -145,7 +155,7 @@ export default function App() {
       {/* ESTO NO ES SOLO UN E-BOOK */}
       <section className="no-solo-ebook">
         <div className="container">
-          <h2>ESTO NO ES<br /><span className="text-gold">SOLO UN E-BOOK</span></h2>
+          <h2 className="reveal">ESTO NO ES<br /><span className="text-gold">SOLO UN E-BOOK</span></h2>
           <p className="nseb-intro">
             Este material fue diseñado para ser más que una lectura. Es un camino de <strong>40 días</strong> que te guía, paso a paso, hacia una fe más profunda, una mente renovada y un propósito claro.
           </p>
@@ -213,8 +223,8 @@ export default function App() {
       {/* VALOR DE LOS BONOS */}
       <section className="valor-bonos">
         <div className="container">
-          <p className="vb-eyebrow">INCLUYE 5 BONOS EXCLUSIVOS</p>
-          <h2 className="vb-headline">
+          <p className="vb-eyebrow reveal">INCLUYE 5 BONOS EXCLUSIVOS</p>
+          <h2 className="vb-headline reveal">
             Todo lo que recibes<br />
             <span className="text-gold">con tu compra hoy</span>
           </h2>
@@ -223,8 +233,8 @@ export default function App() {
             el impacto del libro en tu vida diaria.
           </p>
 
-          <ul className="vb-list">
-            <li className="vb-item">
+          <ul className="vb-list stagger">
+            <li className="vb-item reveal">
               <span className="vb-num">①</span>
               <div className="vb-info">
                 <strong className="vb-name">35 Versículos de Fe</strong>
@@ -235,7 +245,7 @@ export default function App() {
                 <span className="vb-gratis">HOY GRATIS</span>
               </div>
             </li>
-            <li className="vb-item">
+            <li className="vb-item reveal">
               <span className="vb-num">②</span>
               <div className="vb-info">
                 <strong className="vb-name">35 Versículos de Esperanza</strong>
@@ -246,7 +256,7 @@ export default function App() {
                 <span className="vb-gratis">HOY GRATIS</span>
               </div>
             </li>
-            <li className="vb-item">
+            <li className="vb-item reveal">
               <span className="vb-num">③</span>
               <div className="vb-info">
                 <strong className="vb-name">35 Versículos de Propósito</strong>
@@ -257,7 +267,7 @@ export default function App() {
                 <span className="vb-gratis">HOY GRATIS</span>
               </div>
             </li>
-            <li className="vb-item">
+            <li className="vb-item reveal">
               <span className="vb-num">④</span>
               <div className="vb-info">
                 <strong className="vb-name">Libro de Oraciones</strong>
@@ -268,7 +278,7 @@ export default function App() {
                 <span className="vb-gratis">HOY GRATIS</span>
               </div>
             </li>
-            <li className="vb-item">
+            <li className="vb-item reveal">
               <span className="vb-num">⑤</span>
               <div className="vb-info">
                 <strong className="vb-name">Plan de Lectura Bíblica</strong>
@@ -281,13 +291,13 @@ export default function App() {
             </li>
           </ul>
 
-          <div className="vb-total-box">
+          <div className="vb-total-box reveal">
             <p className="vb-total-label">5 bonos exclusivos — valor total</p>
             <p className="vb-total-valor">US$ 31,50</p>
             <p className="vb-total-hoje">Incluidos hoy con tu compra: <strong>US$ 0,00</strong></p>
           </div>
 
-          <div className="vb-paquete">
+          <div className="vb-paquete reveal">
             <p className="vb-paquete-title">VALOR TOTAL DEL PAQUETE</p>
             <div className="vb-paquete-rows">
               <div className="vb-paquete-row">
@@ -319,11 +329,11 @@ export default function App() {
           <p className="autor-label">SOBRE EL AUTOR</p>
           <h2 className="autor-name">Daniel Machado</h2>
           <div className="autor-inner">
-            <div className="autor-img-wrapper">
+            <div className="autor-img-wrapper reveal">
               <img src={B + 'images/autor-v2.webp'} alt="Daniel Machado – Autor" className="autor-img-mobile" />
               <img src={B + 'images/autor-v2.webp'} alt="Daniel Machado – Autor" className="autor-img-desktop" />
             </div>
-            <div className="autor-text">
+            <div className="autor-text reveal">
               <p>
                 Daniel Machado es escritor, predicador y comunicador cristiano, dedicado
                 a crear recursos bíblicos que ayudan a las personas a fortalecer su fe
@@ -350,19 +360,19 @@ export default function App() {
       {/* TESTIMONIOS */}
       <section className="testimonios">
         <div className="container">
-          <h2>LO QUE DICEN QUIENES YA LO LEYERON</h2>
-          <div className="testimonios-grid">
-            <div className="testimonio-card">
+          <h2 className="reveal">LO QUE DICEN QUIENES YA LO LEYERON</h2>
+          <div className="testimonios-grid stagger">
+            <div className="testimonio-card reveal">
               <div className="stars">★★★★★</div>
               <p>"Comencé a leer sin saber qué esperar, y al tercer día ya sentía algo diferente. Dios empezó a hablarme con claridad sobre mi propósito. Exactamente lo que necesitaba."</p>
               <span>— María González</span>
             </div>
-            <div className="testimonio-card">
+            <div className="testimonio-card reveal">
               <div className="stars">★★★★★</div>
               <p>"Las reflexiones son profundas pero muy accesibles. Cada día encontré algo que tocó mi corazón. Daniel tiene el don de hacer que la Palabra de Dios sea práctica y transformadora."</p>
               <span>— Ana Rodríguez</span>
             </div>
-            <div className="testimonio-card">
+            <div className="testimonio-card reveal">
               <div className="stars">★★★★★</div>
               <p>"Los bonos me sorprendieron. Los versículos y el plan de lectura bíblica se convirtieron en parte de mi rutina diaria. Vale mucho más que el precio. ¡Lo recomiendo!"</p>
               <span>— Carlos Méndez</span>
@@ -374,14 +384,14 @@ export default function App() {
       {/* GARANTIA */}
       <section id="comprar" className="garantia">
         <div className="container garantia-inner">
-          <div className="garantia-badge">
+          <div className="garantia-badge reveal">
             <div className="badge">
               <div className="badge-top">GARANTÍA</div>
               <div className="badge-days">7</div>
               <div className="badge-bottom">DÍAS</div>
             </div>
           </div>
-          <div className="garantia-text">
+          <div className="garantia-text reveal">
             <h2>COMPRA CON<br /><span className="text-gold">TOTAL SEGURIDAD</span></h2>
             <p>
               Tienes 7 días para explorar el material completo. Si sientes que no es para ti,
@@ -396,25 +406,25 @@ export default function App() {
       {/* FAQ */}
       <section id="faq" className="faq">
         <div className="container">
-          <h2>PREGUNTAS FRECUENTES</h2>
-          <div className="faq-list">
-            <details className="faq-item">
+          <h2 className="reveal">PREGUNTAS FRECUENTES</h2>
+          <div className="faq-list stagger">
+            <details className="faq-item reveal">
               <summary>¿Cómo recibiré el libro y los bonos?</summary>
               <p>Recibirás acceso inmediato al libro digital y a todos los bonos por correo electrónico, de forma instantánea, al confirmar tu compra en Hotmart.</p>
             </details>
-            <details className="faq-item">
+            <details className="faq-item reveal">
               <summary>¿Cuánto tiempo necesito por día para el devocional?</summary>
               <p>Con 10 a 20 minutos diarios ya puedes aprovechar todo el material — incluyendo la lectura, la reflexión y la oración. Fue diseñado para ser práctico y accesible en tu rutina.</p>
             </details>
-            <details className="faq-item">
+            <details className="faq-item reveal">
               <summary>¿En qué formato está disponible?</summary>
               <p>El libro y los bonos están en formato digital PDF, compatibles con todos los dispositivos: teléfono, tablet y computadora.</p>
             </details>
-            <details className="faq-item">
+            <details className="faq-item reveal">
               <summary>¿Necesito conocimiento bíblico previo?</summary>
               <p>No. Este material fue diseñado para personas en cualquier nivel espiritual. Si tienes el deseo genuino de crecer en tu fe y conocer el propósito de Dios, este libro es para ti.</p>
             </details>
-            <details className="faq-item">
+            <details className="faq-item reveal">
               <summary>¿Cómo funciona la garantía de 7 días?</summary>
               <p>Tienes 7 días para solicitar el reembolso completo si no estás satisfecho. Escríbenos y te devolveremos el 100% de tu dinero, sin preguntas.</p>
             </details>
@@ -425,12 +435,12 @@ export default function App() {
       {/* FINAL CTA */}
       <section className="final-cta">
         <div className="container">
-          <p className="final-eyebrow">NO LLEGASTE HASTA AQUÍ POR CASUALIDAD</p>
-          <h2>
+          <p className="final-eyebrow reveal">NO LLEGASTE HASTA AQUÍ POR CASUALIDAD</p>
+          <h2 className="reveal">
             Este puede ser el momento<br />
             que Dios preparó para ti
           </h2>
-          <p className="final-desc">
+          <p className="final-desc reveal">
             El libro y los 5 bonos te esperan.<br />
             Empieza hoy tus 40 días de fe, claridad y propósito.
           </p>
